@@ -1,0 +1,9 @@
+<ul id="comments">
+<% @comments.each_with_index do |comment, i| %>
+  <li class="comment">
+    <%= comment %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to "new comment", '/ajax/comments/new', id: 'new_comment_link', remote: true %>
