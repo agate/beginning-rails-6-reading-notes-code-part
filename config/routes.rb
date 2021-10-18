@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/ajax/comments', to: 'ajax#comments'
   post '/ajax/comments', to: 'ajax#create_comment'
   get '/ajax/comments/new', to: 'ajax#new_comment'
+
+  resources :posts
 end

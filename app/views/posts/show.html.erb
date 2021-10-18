@@ -1,0 +1,15 @@
+<h1>Post</h1>
+
+<%= link_to 'back to /posts', posts_path %>
+
+<h3>Title</h3>
+<div>
+  <%= @post.title %>
+</div>
+
+<% if @post.file.attached? %>
+  <h3>File</h3>
+  <div>
+    <%= link_to 'download', rails_blob_path(@post.file) %>
+  </div>
+<% end %>

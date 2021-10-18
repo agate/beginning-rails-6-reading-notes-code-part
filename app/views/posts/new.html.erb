@@ -1,0 +1,14 @@
+<h1>New Post</h1>
+
+<%= link_to 'back to /posts', posts_path %>
+
+<%= form_for @post do |f| %>
+  <br/>
+  <%= f.text_field :title %>
+  <br/>
+  <br/>
+  <%= f.file_field :file %>
+  <br/>
+  <br/>
+  <%= f.submit %>
+<% end %>
